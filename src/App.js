@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+import Dictionary from "./Dictionary";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <header className="App-header">
+          <h1>Barbara's Dictionary</h1>
+          <p>
+            Get clear definitions and audio pronunciations of words in British
+            and American English.
+          </p>
+        </header>
+        <main>
+          <Dictionary />
+        </main>
+        <footer className="App-footer">
+          <small>
+            This project is coded by{" "}
+            <a
+              href="https://dancing-crostata-234d9f.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Barbara Morales
+            </a>{" "}
+            and is{" "}
+            <a
+              href="https://github.com/barbaramm11/dictionary-react-app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              open-sourced on GitHub
+            </a>
+          </small>
+        </footer>
+      </div>
     </div>
   );
 }
-
-export default App;
